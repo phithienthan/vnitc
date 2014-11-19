@@ -1,0 +1,24 @@
+<section class="topic">
+<header>
+<h1><a title="Bài mới" href="#">Danh mục sản phẩm</a></h1>
+</header>
+<?php 
+    $i = 0;
+    foreach($categorys as $item){
+        $i++;
+?>
+    
+    <article <?php if($i == 1){ echo "class=\"featured\"";}?>>
+        <header>
+        <h1>
+        <a href="/<?php echo $item['url_key'];?>/">
+        <?php echo $item['title'];?>
+        </a>
+        </h1>
+        </header>
+    </article>
+<?php
+    }        
+?>
+<!--<p class="btnMore"><a title="TOPIC_TITLE" href="/tieu-diem/tg-chuyen-4-phuong.html">Xem thêm</a></p>-->
+</section>

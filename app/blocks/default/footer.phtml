@@ -1,0 +1,20 @@
+<tr>
+    <td height=9 background=<?php echo SKIN_PATH ?>default/images/bg-footer.gif></td>
+</tr>
+<tr>
+    <td align=center class="footer">
+        <a href="#">Trang chủ</a>&nbsp;&nbsp; |&nbsp;&nbsp;         
+        <?php 
+            $i = 0;
+            foreach ($categorys as $cate) { 
+                $i++;
+                if($i < count($categorys)){
+                ?>
+                <a href="<?php echo $cate['url_key']; ?>"><?php echo $cate["title"]; ?></a>&nbsp;&nbsp; |&nbsp;&nbsp; 
+                <?php } else {?>
+                <a href="<?php echo $cate['url_key']; ?>"><?php echo $cate["title"]; ?></a>
+                <?php } ?>
+            <?php } ?>        
+        <img src=<?php echo SKIN_PATH ?>default/images/line-footer.gif style="margin: 5px 0px 10px 0px;">
+        <?php echo $footer;?> </td>
+</tr>    

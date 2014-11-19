@@ -1,0 +1,74 @@
+<?php
+if ($categoryInfo == null) {
+    $pageTitle = "Thêm mới chuyên mục";
+    $categoryInfo["title"] = "";
+    $categoryInfo["url_key"] = "";
+    $categoryInfo["sort_order"] = "";
+    $categoryInfo['type'] = "";
+    $categoryInfo["meta_keywords"] = "";
+    $categoryInfo["meta_description"] = "";
+    $categoryInfo['parent_id'] = 0;
+} else {
+    $pageTitle = "Sửa chuyên mục";
+}
+?>
+<form id="edit_form" action="/admin/category/post/id/<?php echo $id ?>" method="post">
+    <div class="lblHeader"><h2><?php echo $pageTitle ?></h2></div>
+    <div class="clr"></div>
+    <div class="fl cateL">
+        <div class="lblCategory fl">Tên chuyên mục: </div><div class="fl lineSpace"><input type="text" class="input-text" title="Title" value="<?php echo $categoryInfo['title'] ?>" name="title" id="title"></div>
+        <div class="lblCategory fl">URL Key: </div><div class="fl lineSpace"><input type="text" class="input-text" title="URL Key" value="<?php echo $categoryInfo['url_key'] ?>" name="url_key" id="url_key"></div>
+        <div class="clr"></div>
+        <div class="lblCategory fl">Thứ tự: </div><div class="fl lineSpace"><input type="text" class="input-text" value="<?php echo $categoryInfo['sort_order'] ?>" name="sort_order" id="sort_order"></div>            
+        <div class="lblCategory fl">Loại: </div><div class="fl lineSpace">        
+            <select name="type" id="type" class="sltCategoryType">
+                <option value="0">Hãy chọn loại</option>
+                <?php foreach ($categoryTypes as $typeInfo) { ?>            
+                    <option value="<?php echo $typeInfo["type_key"] ?>" <?php if ($categoryInfo['type'] == $typeInfo['type_key']) echo "selected=selected" ?>><?php echo $typeInfo["type_name"] ?>                
+                    </option>
+                <?php } ?>            
+            </select>
+        </div>           
+        <div class="clr"></div>           
+        <div class="lblCategory fl">Vị trí hiển thị: </div>
+        <div class="fl lineSpace">            
+            <?php
+            foreach ($positions as $pos) {
+                $checked = "";
+                foreach ($catePoss as $catePos) {
+                    if ($catePos['position_id'] == $pos['id']) {
+                        $checked = " checked = checked ";
+                        break;
+                    }
+                }
+                ?>
+                <input type="checkbox" name="position[]" id="position[]" <?php echo $checked; ?>  value="<?php echo $pos['id'] ?>">&nbsp;<?php echo $pos['pos_name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <?php } ?>                            
+        </div>  
+
+        <div class="clr"></div>
+        <div class="lblCategory fl">Từ khóa: </div><div class="fl lineSpace"><textarea class="txaCategory" cols="15" rows="2" title="Meta Keywords" name="meta_keywords" id="meta_keywords"><?php echo $categoryInfo['meta_keywords'] ?></textarea></div>    
+        <div class="clr"></div>
+        <div class="lblCategory fl">Mô tả: </div><div class="fl lineSpace"><textarea class="txaCategory" cols="15" rows="2" title="Meta Description" name="meta_description" id="meta_description"><?php echo $categoryInfo['meta_description'] ?></textarea></div>
+        <div class="clr"></div>        
+    </div>
+    <div class="fl cateR">
+        <div class="lblCategory fl">Thư mục cha: </div><div class="fl lineSpace">        
+            <select name="parent_id" id="parent_id" multiple="multiple" class="sltCategory">
+                <option value="0" <?php if ($categoryInfo['parent_id'] == 0) echo "selected=selected" ?>>Root</option>
+                <?php foreach ($categorys as $category) { ?>            
+                    <option value="<?php echo $category["id"] ?>" <?php if ($categoryInfo['parent_id'] == $category['id']) echo "selected=selected" ?>><?php
+                        for ($k = 0; $k < $category["level"]; $k++) {
+                            echo "....";
+                        } echo $category["title"]
+                        ?>                
+                    </option>
+<?php } ?>            
+            </select>
+        </div>        
+        <div class="clr"></div>
+        <div class="divCmdSubmit">        
+            <input type="submit" title="Save Category" id="cmd_submit" value="Save Category" />
+        </div>        
+    </div>
+</form>

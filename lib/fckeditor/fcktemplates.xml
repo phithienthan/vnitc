@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Templates imagesBasePath="fck_template/images/">
+  <Template title="Box xanh nhạt" image="template1.gif">
+    <Description>Nhúng ô xanh vào nội dung</Description>
+    <Html>
+      <![CDATA[
+        <TABLE style="BORDER-COLLAPSE: separate" cellSpacing=0 cellPadding=5 width=200 align=left bgColor=#e8eefa border=0>
+          <TBODY>
+            <TR>
+              <TD>Nhập nội dung</TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+			]]>
+    </Html>
+  </Template>
+  <Template title="Box bảng biểu" image="template3.gif">
+    <Description>Nhúng bảng biểu vào nội dung</Description>
+    <Html>
+      <![CDATA[
+        <TABLE style="WIDTH: 315px; BORDER-COLLAPSE: collapse;" borderColor=#fbfbfb cellSpacing=0 cellPadding=3 width=315 align=right bgColor=#f1f1f1 border=1><TBODY>
+          <TR><TD vAlign=center bgColor=#2145b7 colSpan=2 style="color:#FFF;padding:3px;">Tiêu đề bảng</TD></TR>
+          <TR><TD width="30%">Thông tin 1</TD><TD>Nội dung 1</TR>
+          <TR><TD>Thông tin 2</TD><TD>Nội dung 2</TD></TR>
+          </TBODY></TABLE>
+			]]>
+    </Html>
+  </Template>
+  <Template title="Box khung viền" image="template1.gif">
+    <Description>Nhúng ô viền vào nội dung</Description>
+    <Html>
+      <![CDATA[
+        <TABLE style="BORDER-COLLAPSE: separate" borderColor=#ecf2fe cellSpacing=0 borderColorDark=#456ae1 cellPadding=5 width="96%" align=center borderColorLight=#4792d9 border=1>
+          <TBODY>
+            <TR>
+              <TD vAlign=center bgColor=#cfe6f9>Nhập nội dung o day</TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+			]]>
+    </Html>
+  </Template>
+</Templates>

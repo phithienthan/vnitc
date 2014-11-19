@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>    
+    <admin>
+        <items controller="category">
+            <title>Chuyên mục</title>                           
+            <children action="edit">
+                <title>Thêm chuyên mục</title>                
+                <action>category/edit</action>
+            </children>
+            <children action="list">
+                <title>Danh sách chuyên mục</title>                
+                <action>category/list</action>
+            </children>                            
+        </items>      
+        <items controller="article">
+            <title>Tin bài</title>                                    
+            <children action="edit">
+                <title>Viết bài</title>                
+                <action>article/edit</action>
+            </children>
+            <children action="list">
+                <title>Danh sách bài viết</title>                
+                <action>article/list</action>
+            </children>                            
+        </items>          
+        <items controller="product">
+            <title>Thư viện ảnh</title>    
+            <children action="edit">
+                <title>Thêm ảnh</title>                
+                <action>product/edit</action>
+            </children>
+            <children action="list">
+                <title>Danh sách ảnh</title>                
+                <action>product/list</action>
+            </children>               
+        </items>            
+        <items controller="banner">
+            <title>Banner</title>    
+            <children action="edit">
+                <title>Thêm banner</title>                
+                <action>banner/edit</action>
+            </children>
+            <children action="index">
+                <title>Danh sách banner</title>                
+                <action>banner/index</action>
+            </children>         
+        </items>          
+        <items controller="user">
+            <title>Người dùng</title>    
+            <children action="edit">
+                <title>Thêm người dùng</title>                
+                <action>user/edit</action>
+            </children>
+            <children action="index">
+                <title>Danh sách người dùng</title>                
+                <action>user/index</action>
+            </children>         
+        </items> 
+        <items controller="feedback">
+            <title>Phản hồi</title>    
+            <children action="list">
+                <title>Thông tin phản hồi</title>                
+                <action>feedback/index</action>
+            </children>            
+        </items>                   
+        <items controller="contact">
+            <title>Hệ thống</title>    
+            <children action="edit">
+                <title>Thông tin liên hệ</title>                
+                <action>contact/edit</action>
+            </children>            
+        </items>           
+        <!--  
+        <items controller="config">
+            <title>Rewrite</title>    
+            <children action="rewrite">
+                <title>URL Suffix</title>                
+                <action>config/rewrite</action>
+            </children>        
+        </items>  
+        -->          
+    </admin>
+</menu>

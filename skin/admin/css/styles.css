@@ -1,0 +1,345 @@
+/* CSS Document */
+
+* { margin:0; padding:0;}
+
+html, body { height:100%; font-size: 13px; background: none repeat scroll 0 0 #E2E2E2}
+
+html, input, textarea, select	{font-family: Arial, sans-serif; color:#444444;}
+a{
+
+    color:#222222;
+    text-decoration:none;
+}
+a:hover{
+
+    color:#686868;
+    /* text-decoration:underline; */
+}
+/* Heading reset */
+
+h1, h2, h3, h4, h5, h6 {
+
+    margin: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    font-size: 100%;
+
+    font: inherit;
+
+    vertical-align: baseline;
+
+    display:inline;
+
+}
+
+h2 {
+    font-size: 15px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+
+    margin: 9px 0px 9px 0px;
+
+}
+.clr{
+    clear: both;
+}
+.fl{
+    float: left;
+}
+/*page layout*/
+.wrapper{
+    width: 100%;
+}
+.container{    
+    background: url("../images/content-tail.gif") repeat-x scroll 0 bottom #FFFFFF;
+    padding: 20px 0 10px;
+    position: relative;
+    z-index: 4;     
+}
+.main_content {
+    min-height: 400px;
+    width: 1000px;
+    margin: 0 auto;   
+}
+.div_footer{
+    width: 1000px;
+    margin: 0 auto;    
+    font-size: 12px;    
+    overflow: hidden;
+    padding: 14px 0;
+    position: relative;    
+    text-align: right;
+}
+.left {
+    width: 220px;
+    min-height: 540px;
+}
+.content{
+    width: 100%;
+    padding: 0 0 10px 20px;
+}
+/*header*/
+
+.div_header {
+    background: url("../images/top-bg.jpg") repeat-x bottom scroll transparent;
+    float: left;
+    width: 100%;
+    min-height: 6px;
+}
+
+.top_header {
+    background: url("../images/header-tail.gif") repeat-x scroll 0 0 #E1E1E1;    
+    position: relative;        
+    width:100%;  
+    min-height: 30px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.top_header a{
+    font-weight: bold;
+}
+
+.top_content{
+    width:1000px;
+    margin: 0 auto;    
+    text-align: right;
+}
+.top_text_box{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    width:1000px;
+    height: 30px;
+}
+/*left content*/
+.hp-1 {
+    padding: 0 0 17px;
+}
+.list-1 {
+    padding: 0 0 13px;
+}
+.list-1 li:first-child {
+    background: none repeat scroll 0 0 transparent;
+}
+.list-1 li {
+    background: url("../images/list-1-border.gif") repeat-x scroll 0 0 transparent;
+    display: block;
+    line-height: 21px;
+    padding: 9px 0 10px;
+    position: relative;
+}
+
+.list-1 li a {
+    background: url("../images/list-1-marker.png") no-repeat scroll 0 3px transparent;
+    color: #008EBD;
+    display: inline-block;    
+    font-weight: bold;
+    line-height: 21px;
+    padding: 0 0 0 25px;
+    text-decoration: none;
+    transition: all 200ms ease 0s;
+}
+.list-1 li a:hover {color:#929292;}
+
+/*login page*/
+.admin_login {
+    text-align: center;
+}
+.login-box {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #CECECE;
+    margin-top: 30px;
+    min-width: 300px;
+    padding-bottom: 20px;
+    width: 400px;
+}
+.form-item {
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+/*end login*/
+
+.lblCategory {
+    width: 120px;  
+    padding: 8px 0 0 0;
+}
+.lblStatus {    
+    padding: 8px 5px 0 0;
+}
+.input-text{    
+    width: 280px;
+}
+.txtShort{
+    width: 180px;
+}
+.sltCategoryType{
+    min-width: 280px;    
+    min-height: 25px;
+}
+.sltCategory{
+    width: 320px;
+    height: 300px;       
+}
+.sltCateArt{
+    width: 180px;
+    height: 200px;       
+}
+.txaCategory{
+    width: 280px;
+    height: 80px;    
+}
+.divCmdSubmit{
+    width: 100%;
+    text-align: left;
+    padding: 10px 0 10px 120px; 
+}
+.divCmdRight{
+    width: 240px;
+    text-align: right;
+    padding: 10px 0 0 0; 
+}
+.lineSpace{
+    margin: 8px 10px 8px 0px;
+}
+
+.tblList{
+    width: 100%;
+    border-color: #DADFE0;
+    border-style: solid;
+    border-width: 1px 0 0 1px;     
+}
+.tblList td {
+    border-color: #DADFE0;
+    border-style: solid;
+    border-width: 0 1px 1px 0;   
+}
+.tr_head{
+    background: #F2F2F2 url("../images/header-tail.gif") repeat-x scroll 0 0;
+    font-weight: bold;
+    height: 25px;
+    text-align: center;
+}
+.tr_footer{
+    background: #F2F2F2 url("../images/header-tail.gif") repeat-x scroll 0 0;    
+    height: 25px;
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+}
+.tr_footer a{
+    color: #008EBD;
+    font-weight: normal;
+}
+.tr_footer a:hover{
+    text-decoration: underline;
+}
+.tr_item_0{
+    background: #F2F2F2;
+    height: 25px;
+}
+.tr_item_1{    
+    height: 25px;
+}
+.a_center{
+    text-align: center;
+}
+.a_left{
+    padding-left: 5px;
+}
+.div_total{
+    margin: 0 0 10px 0;
+}
+.txtEditor{
+    width: 100%;
+}
+.tdDelAll{
+    height: 40px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+/* treeView */
+.treeView{
+-moz-user-select:none;
+position:relative;
+}
+
+.treeView ul{
+margin:0 0 0 -1.5em;
+padding:0 0 0 1.5em;
+}
+
+.treeView ul ul{
+background:url('../images/list-item-contents.png') repeat-y left;
+}
+
+.treeView li.lastChild > ul{
+background-image:none;
+}
+
+.treeView li{
+margin:0;
+padding:0;
+background:url('../images/list-item-root.png') no-repeat top left;
+list-style-position:inside;
+list-style-image:url('../images/button.png');
+cursor:auto;
+}
+
+.treeView li.collapsibleListOpen{
+list-style-image:url('../images/button-open.png');
+cursor:pointer;
+}
+
+.treeView li.collapsibleListClosed{
+list-style-image:url('../images/button-closed.png');
+cursor:pointer;
+}
+
+.treeView li li{
+background-image:url('../images/list-item.png');
+padding-left:1.5em;
+}
+
+.treeView li.lastChild{
+background-image:url('../images/list-item-last.png');
+}
+
+.treeView li.collapsibleListOpen{
+background-image:url('../images/list-item-open.png');
+}
+
+.treeView li.collapsibleListOpen.lastChild{
+background-image:url('../images/list-item-last-open.png');
+}
+.cateL{    
+    width:480px;
+}
+.lblOrder{
+    width: 55px;
+    padding-top: 8px;
+}
+.secEditor{
+    width: 740px;
+    margin-right: 10px;
+}
+.upload_file{
+    height: 30px;    
+}
+
+.image_des{
+    margin-right: 10px;
+}
+section.sidebar{
+    width: 250px;
+}

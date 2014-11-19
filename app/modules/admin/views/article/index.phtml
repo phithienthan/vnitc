@@ -1,0 +1,10 @@
+<div><h2 class="hp-1">Danh sách bài viết</h2></div>
+<div class="frmSearch">
+    <form id="frmSearch" action="/admin/article/searchresult" method="post">
+        <input type="text" id="txtKey" name="txtKey" value="" />
+        <input type="submit" id="cmdSearch" value="Tìm kiếm" />
+    </form>    
+</div>
+<?php
+echo $grid->html();
+?>

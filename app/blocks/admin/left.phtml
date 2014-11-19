@@ -1,0 +1,29 @@
+<div class="menu_left">  
+    <?php
+    $doc = new DOMDocument();
+    $doc->load(APP_PATH . '/etc/admin_menu.xml');
+    $menus = $doc->getElementsByTagName("items");
+    foreach ($menus as $menu) {
+        $title = $menu->getElementsByTagName("title");
+        ?>      
+        <h2 class="hp-1"><?php echo $title->item(0)->nodeValue ?></h2> 
+        <?php
+        $childs = $menu->getElementsByTagName("children");
+        if ($childs->length > 0) {
+            ?>
+            <ul class="list-1">
+                <?php
+                foreach ($childs as $child) {
+                    $title_child = $child->getElementsByTagName("title");
+                    $link_child = $child->getElementsByTagName("action");
+                    ?>
+                    <li><a href="<?php echo "/admin/".$link_child ->item(0)->nodeValue?>"><?php echo $title_child->item(0)->nodeValue;?></a></li>
+                    <?php
+                }
+                ?>
+            </ul>             
+            <?php
+        }
+    }
+    ?>                   
+</div>    

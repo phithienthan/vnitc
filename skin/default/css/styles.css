@@ -1,0 +1,241 @@
+HTML, BODY {
+	 background-color:#0082bf; font: 11px Tahoma, Verdana, Arial, Helvetica, sans-serif; COLOR: #000; margin-top:8px;
+}
+a {
+    color: #222222;
+    text-decoration: none;
+}
+a:hover{
+    color: #666666;
+    text-decoration: none;
+}
+img {
+	border:0;
+}
+.menuT {
+	font-weight:bold;
+	font-size: 11px;
+	padding-left: 12px;
+	border-bottom: 1px solid #505050;
+}
+.menuB {
+	font-weight:bold;
+	font-size: 11px;
+	padding-top:5px;
+	padding-left: 12px;
+}
+#table1 {
+	background-color: #edf2e6;
+	border-top: 1px solid #bdc7b6;	
+	border-left: 1px solid #bdc7b6;
+	border-right: 1px solid #bdc7b6;
+	border-bottom: 1px solid #bdc7b6;
+
+}
+.content {
+	font-size:12px;
+	color:#6a6a6a;
+	padding-right:10px;
+	text-align: right;
+}
+#boder {
+	border-left: 1px solid #bdc7b6;
+	border-right: 1px solid #bdc7b6;
+	border-bottom: 1px solid #bdc7b6;
+}
+.CSSmenu {
+	font-family: Tahoma;
+	font-size: 11px;
+	margin: 0px 5px 0px 5px;
+	border-bottom: 1px solid #dedede;
+	height:30px;
+}
+.CSSmenu A {
+	display:block; background: url(../images/icon-menu.gif) no-repeat scroll 8% 50%;
+	color: #000; height:22px;
+	padding:8px 0px 0px 30px;
+}
+.CSSmenu A:hover {
+	display:block; background: url(../images/icon-menu.gif) #0096dc no-repeat scroll 8% 50%;
+	color: #fff; height:22px;
+	padding:8px 0px 0px 30px;
+
+}
+.titleT {
+	font-weight: bold;
+	font-size: 12px;
+	color: #ff7200;
+}
+.title-menu {
+	font-size: 18px;
+	font-family: Times New Roman;
+	color: #0096dc;
+	font-weight:bold;
+	padding-left:10px;
+	padding-right:10px;
+	
+}
+.title-menu-right {
+	font-size: 12px;
+	color: #fff;
+	font-weight:bold;
+	padding-left:47px;
+	
+}
+#oder {
+	background-color: #e8f8e3;
+	border-left: 1px solid #bcf14e;
+	border-right: 1px solid #bcf14e;
+}
+#oder1 {
+	font-family: Tahoma;
+	font-weight:bold;
+	line-height:18px;
+	font-size: 11px;
+}
+#oder1 A {
+	color: #1f1e50;
+}
+#oder1 A:hover {
+	color: #f26100;
+}
+
+.CSSinput {
+	border: 1px solid #95c3d8; height: 22px; width: 140px; font-size: 11px; font-family: Tahoma; padding-left:5px; padding-top: 5px;
+}
+.input {
+	padding:15px 0px 10px 10px;
+}
+.top-tour {
+	margin:10px 9px 5px 9px;
+	font-weight: bold;
+}
+.about {
+	font-size: 11px;
+	padding-right:10px;
+}
+.menu {
+	color: #000;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	text-align: center;
+}
+.menu a {
+	color: #000;
+	font-weight: bold;
+}
+.menu a:hover {
+	color: #007db7;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.title {
+	font-weight: bold;
+	font-size: 11px;
+	color: #034000;
+	padding-left:10px;	
+}
+.footer {
+	font-size: 11px;
+	padding-top: 15px;
+	color: #fff;
+	padding-bottom:10px;	
+}
+.footer a {
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+}
+.footer a:hover {
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #000;
+}
+.content img
+{
+    margin: 0 0 0 0px;
+}
+
+/* news */
+section.sec_content > header {
+    border-bottom: 1px solid #E5E5E5;    
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0 8px 0;
+    padding: 8px 0 6px 8px;
+    width: 641px;
+}
+section.content_detail > header {
+    border-bottom: 1px solid #E5E5E5;
+    /* border-top: 1px solid #0098D3; */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px 0 8px 0;
+    padding: 8px 0 6px;
+    width: 98%;
+}
+.news_title{
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.pTitle{
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.pHead{
+    font-size: 13px;
+    line-height: 20px;
+}
+.date_time{
+    float: right;
+    display: inline;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 12px;
+    color: #888;    
+    margin-top: 7px;
+    padding-right: 8px;
+}
+section.content_detail article {
+    width: 490px;
+    margin-right: 10px;
+    float:left;
+}
+
+section.sec_content article .cover {
+    float: left;
+    height: 110px;
+    margin-right: 2%;
+    margin-top: 5px;
+    width: 180px;
+}
+section.sec_content article header {
+    margin-top: -5px;
+}
+section.content_detail article header {
+    margin-top: -5px;
+}
+section.sec_content article {
+    /* border-bottom: 1px solid #F1F1F1; */
+    float: left;
+    margin: 0 0 10px 8px;
+    padding: 0 0 10px;
+    width: 641px;
+}
+section.content_detail article .cover{    
+    height: 110px;
+    margin: 5px 2% 0 0;
+    width: 180px;
+    border: solid 1px #ccc;
+    background-repeat: no-repeat;
+    background-position: center top;    
+}
+section.content_detail article .cover:hover{
+    border: solid 1px #2EC0D2;
+}
+.news_item{
+    margin: 0 0 0 8px;
+}

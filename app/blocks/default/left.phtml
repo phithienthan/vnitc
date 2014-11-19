@@ -1,0 +1,34 @@
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+    <tr>
+        <td height=179 align=center><img src="<?php echo SKIN_PATH ?>default/images/logo.jpg" /></td>
+    </tr>
+    <tr>
+        <td valign=top>
+        <table width="100%" cellpadding=0 cellspacing=0 id="table1">
+            <tr>
+                <td height=30 class="menuT">
+                <img border="0" src="<?php echo SKIN_PATH ?>default/images/icon-menuT.gif" width="12" height="12" align=absmiddle><span style="margin-left:8px;">TIN TỨC</span>
+                </td>
+            </tr>
+            <?php foreach ($articles as $article) { ?>
+            <tr>
+                <td height=30 class="CSSmenu"><a href="/<?php echo $article['url_key']; ?>"><?php echo $article['title']; ?></a></td>
+            </tr>
+            <?php } ?>
+            <tr>
+                <td height=1 bgcolor="#505050"></td>
+            </tr>
+            <tr>
+                <td class="menuB"><img src="<?php echo SKIN_PATH ?>default/images/icon-photo.gif" align=absmiddle>THƯ VIỆN ẢNH</td>
+            </tr>
+            <tr>
+                <td align=center><a href="/thu-vien-anh" ><img src="<?php echo SKIN_PATH ?>default/images/photo.jpg"></a></td>
+            </tr>
+            <tr>
+                <td class="menuB"><img src="<?php echo SKIN_PATH ?>default/images/icon-video.gif" align=absmiddle>VIDEO</td>
+            </tr>
+        </table>
+        <p>
+        </td>
+    </tr>
+</table>

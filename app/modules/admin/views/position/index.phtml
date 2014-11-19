@@ -1,0 +1,33 @@
+<div><h2 class="hp-1">Danh sách chuyên mục</h2></div>
+<?php
+$categoryGrid = new Grid($parentCategorys);
+$categoryGrid->setModule('admin');
+$categoryGrid->setController('category');
+$categoryGrid->setTotalRecord($totalRecord);
+$categoryGrid->setPageSize($pageSize);
+$categoryGrid->addColumn(array(
+    'header' => 'Tên chuyên mục',
+    'align' => 'left',
+    'width' => '',
+    'index' => 'title'
+));
+$categoryGrid->addColumn(array(
+    'header' => 'URL key',
+    'align' => 'left',
+    'width' => '',
+    'index' => 'url_key'
+));
+$categoryGrid->addColumn(array(
+    'header' => 'Mục cha',
+    'align' => 'center',
+    'width' => '60',
+    'index' => 'parent_id'
+));
+$categoryGrid->addColumn(array(
+    'header' => 'Thứ tự',
+    'align' => 'center',
+    'width' => '60',
+    'index' => 'sort_order'
+));
+echo $categoryGrid->html();
+?>

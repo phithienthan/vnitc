@@ -1,0 +1,45 @@
+<?php
+if ($feedbackInfo == null) {
+    $pageTitle = "Thông tin phản hồi";
+    $feedbackInfo["username"] = "";
+    $feedbackInfo["display_name"] = "";
+    $feedbackInfo["email"] = "";
+    $feedbackInfo["password"] = "";
+    $feedbackInfo['status'] = 1;
+} else {
+    $pageTitle = "Thông tin phản hồi";
+}
+?>
+<form id="edit_form" action="/admin/user/post/id/<?php echo $id ?>" method="post">
+    <div class="lblHeader"><h2><?php echo $pageTitle ?></h2></div>
+    <div class="clr"></div>
+    <div class="fl cateL">
+        <div class="lblCategory fl">Họ tên: </div><div class="fl lineSpace"><?php echo $feedbackInfo['fullname'] ?></div>
+        <div class="lblCategory fl">Email: </div><div class="fl lineSpace"><?php echo $feedbackInfo['email'] ?></div>
+        <div class="lblCategory fl">Điện thoại: </div><div class="fl lineSpace"><?php echo $feedbackInfo['phone'] ?></div>
+        <div class="clr"></div>
+        <div class="lblCategory fl">Email: </div><div class="fl lineSpace"><?php echo $feedbackInfo['email'] ?></div>            
+        <div class="lblCategory fl">Nội dung: </div><div class="fl lineSpace"><?php echo $feedbackInfo['content'] ?></div>            
+        <?php /*
+          <div class="lblCategory fl">Nhóm: </div><div class="fl lineSpace">
+          <select name="type" id="type" class="sltCategoryType">
+          <option value="0">Hãy chọn loại</option>
+          <?php foreach($categoryTypes as $typeInfo){?>
+          <option value="<?php echo $typeInfo["type_key"]?>" <?php if($categoryInfo['type'] == $typeInfo['type_key']) echo "selected=selected"?>><?php echo $typeInfo["type_name"]?>
+          </option>
+          <?php }?>
+          </select>
+          </div>
+         * */
+        ?>
+        <div class="lblCategory fl">Trạng thái</div>
+        <div class="fl lineSpace">
+            <select name="status" id="status">
+                <option <?php if ($feedbackInfo['status'] == '0') { ?>selected="selected"<?php } ?> value="0">Chưa xem</option>
+                <option <?php if ($feedbackInfo['status'] == '1') { ?>selected="selected"<?php } ?> value="1">Đã xem</option>
+            </select>                        
+        </div>           
+        <div class="clr"></div> 
+        <div class="lblCategory fl"></div><div class="fl lineSpace"><input type="submit" title="Lưu" id="cmd_submit" value="Lưu" /></div>            
+    </div>
+</form>

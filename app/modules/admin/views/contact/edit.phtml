@@ -1,0 +1,31 @@
+<form id="edit_form" action="/admin/contact/post/id/<?php echo $contactInfo['id']; ?>" method="post">
+    <div class="lblHeader"><h2>Sửa thông tin liên hệ</h2></div>
+    <div class="clr"></div>
+    <div class="fl cateL">
+        <div class="lblCategory fl">Hotline: </div>
+        <div class="fl lineSpace">
+            <input type="text" class="input-text" title="User Name" value="<?php echo $contactInfo['hotline'] ?>" name="hotline" id="hotline">
+        </div>
+        <div class="lblCategory fl">Chân trang: </div>
+        <div style="width:1000px;">
+            <div class="fl txtEditor">
+                <?php
+                $oFCKeditor = new FCKeditor('footer');
+                $oFCKeditor->BasePath = '/lib/fckeditor/';
+                $oFCKeditor->Value = $contactInfo['footer'];
+                $oFCKeditor->Height = '300px';
+                $oFCKeditor->Create();
+                ?>  
+            </div>          
+        </div>
+        <div class="lblCategory fl">Trạng thái</div>
+        <div class="fl lineSpace">
+            <select name="status" id="status">
+                <option <?php if ($contactInfo['status'] == '0') { ?>selected="selected"<?php } ?> value="0">Khóa</option>
+                <option <?php if ($contactInfo['status'] == '1') { ?>selected="selected"<?php } ?> value="1">Hoạt động</option>
+            </select>                        
+        </div>           
+        <div class="clr"></div> 
+        <div class="lblCategory fl"></div><div class="fl lineSpace"><input type="submit" title="Lưu" id="cmd_submit" value="Lưu" /></div>            
+    </div>
+</form>

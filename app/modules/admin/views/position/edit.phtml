@@ -1,0 +1,97 @@
+<?php
+if ($categoryInfo == null) {
+    $pageTitle = "Thêm mới chuyên mục";
+    $categoryInfo["title"] = "";
+    $categoryInfo["url_key"] = "";
+    $categoryInfo["sort_order"] = "";
+    $categoryInfo['type'] = "";
+    $categoryInfo["meta_keywords"] = "";
+    $categoryInfo["meta_description"] = "";
+} else {
+    $pageTitle = "Sửa chuyên mục";
+}
+?>
+<form id="edit_form" action="/admin/category/post/id/<?php echo $id ?>" method="post">
+    <div class="lblHeader"><h2><?php echo $pageTitle ?></h2></div>
+    <div class="clr"></div>
+    <div class="fl cateL">
+        <div class="lblCategory fl">Tên chuyên mục: </div><div class="fl lineSpace"><input type="text" class=" input-text" title="Title" value="<?php echo $categoryInfo['title'] ?>" name="title" id="title"></div>
+        <div class="lblCategory fl">URL Key: </div><div class="fl lineSpace"><input type="text" class=" input-text" title="URL Key" value="<?php echo $categoryInfo['url_key'] ?>" name="url_key" id="url_key"></div>
+        <div class="clr"></div>
+        <div class="lblCategory fl">Thứ tự: </div><div class="fl lineSpace"><input type="text" class=" input-text" value="<?php echo $categoryInfo['sort_order'] ?>" name="sort_order" id="sort_order"></div>    
+        <div class="lblCategory fl">Loại: </div><div class="fl lineSpace"><input type="text" class=" input-text" value="<?php echo $categoryInfo['type'] ?>" name="type" id="type"></div>
+        <div class="clr"></div>           
+    </div>
+    <div class="fl cateR">
+        <div class="lblCategory fl">Thư mục cha: </div><div class="fl lineSpace">        
+            <select name="parent_id" id="parent_id" multiple="multiple" class="sltCategory">
+                <option value="0">Root</option>
+                <?php foreach ($parentCategory as $category) { ?>            
+                    <option value="<?php echo $category["id"] ?>" <?php if ($categoryInfo['parent_id'] == $category['id']) echo "selected=selected" ?>><?php
+                        for ($k = 0; $k < $category["level"]; $k++) {
+                            echo "....";
+                        } echo $category["title"]
+                        ?>                
+                    </option>
+<?php } ?>            
+            </select>
+        </div>            
+    </div>
+
+
+    <div class="clr"></div>
+    <div class="lblCategory fl">Từ khóa: </div><div class="fl lineSpace"><textarea class="txaCategory" cols="15" rows="2" title="Meta Keywords" name="meta_keywords" id="meta_keywords"><?php echo $categoryInfo['meta_keywords'] ?></textarea></div>    
+    <div class="lblCategory fl">Mô tả: </div><div class="fl lineSpace"><textarea class="txaCategory" cols="15" rows="2" title="Meta Description" name="meta_description" id="meta_description"><?php echo $categoryInfo['meta_description'] ?></textarea></div>
+    <div class="clr"></div>
+    <div class="divCmdSubmit">        
+        <input type="submit" title="Save Category" id="cmd_submit" value="Save Category" />
+    </div>
+</form>
+<?php
+/*
+  <hr />
+  <br />
+  <script src="<?php echo SKIN_PATH; ?>/admin/js/a.js" type="text/javascript"></script>
+  <script src="<?php echo SKIN_PATH; ?>/admin/js/CollapsibleLists.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  runOnLoad(function(){ CollapsibleLists.apply(); });
+  </script>
+  <ul class="treeView">
+  <li>
+  Root
+  <ul class="collapsibleList">
+  <?php foreach($parentCategory as $category){?>
+
+  <li class=" collapsibleListClosed">
+  <a href="javascript:alert('ok');">Actions</a>
+  <ul style="display: block;" class=" collapsibleList">
+  <li class=" collapsibleListClosed">
+  <a href="#">Creation</a>
+  <ul class=" collapsibleList collapsibleList" style="display: none;">
+  <li class="">apply()</li>
+  <li class="lastChild">applyTo(node)</li>
+  </ul>
+  </li>
+  <li class="lastChild collapsibleListClosed">
+  Toggling
+  <ul class=" collapsibleList collapsibleList" style="display: none;">
+  <li class="">Expanding/opening</li>
+  <li class="lastChild">Collapsing/closing</li>
+  </ul>
+  </li>
+  </ul>
+  </li>
+  <?php }?>
+  <li class="lastChild collapsibleListClosed">
+  Uses
+  <ul style="display: none;" class=" collapsibleList">
+  <li class="">Directory listings</li>
+  <li class="">Tree views</li>
+  <li class="lastChild">Outline views</li>
+  </ul>
+  </li>
+  </ul>
+  </li>
+  </ul>
+ * */
+?> 
