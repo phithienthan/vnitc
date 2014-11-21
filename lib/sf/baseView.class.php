@@ -3,40 +3,19 @@
 /**
  * @author quyetnd
  */
-Class baseView
+Class baseView extends view
 {
     /*
      * @Variables array
      * @access public
      */
-
-    public $data = array();
+    
     public $content = null;
     public $layout = null;
     public $description = "";
     public $title = "";
     public $keywords = "";
-    public $module = null;
-    public $controller = null;
-    public $action = null;
     private static $instance;
-
-    /**
-     *
-     * @constructor
-     *
-     * @access public
-     *
-     * @return void
-     *
-     */
-    function __construct()
-    {
-        $mvcCore = mvcCore::getInstance();
-        $this->module = $mvcCore->module;
-        $this->controller = $mvcCore->controller;
-        $this->action = $mvcCore->action;
-    }
 
     public static function getInstance()
     {
@@ -60,16 +39,6 @@ Class baseView
     public function __set($index, $value)
     {
         $this->vars[$index] = $value;
-    }
-
-    public function block($name)
-    {
-        $path = APP_PATH . "/blocks/" . $this->module . "/" . $name . ".php";
-        if (file_exists($path)) {
-            include $path;
-            $class = strtolower($this->module . "_block_" . $name);
-            $block = new $class($name);
-        }
     }
 
     public function set_layout($layout_name)

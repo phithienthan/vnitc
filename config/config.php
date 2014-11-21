@@ -9,19 +9,19 @@
 define('DB_HOST', '127.0.0.1'); // IP host
 define('DB_USER', 'root'); // User database
 define('DB_PASS', '123456'); // Password database
-define('DB_NAME', 'catrau_db'); // Database name
+define('DB_NAME', 'lonmuong_db'); // Database name
 
 /**
  * Auto redirect to this url when mobile detected
  */
-define('MOBILE_URL', 'http://catrautienvua.com.vn/');
+define('MOBILE_URL', 'http://lonmuongkhuong.com.vn/');
 
 /**
  * Default for SEO
  */
-define('DEFAULT_TITLE', 'Ca trau tien vua dac san Ninh Binh');
-define('DEFAULT_DESCRIPTION', 'Ca trau, Ca trau tien vua dac san Ninh Binh');
-define('DEFAULT_KEYWORDS', 'Ca trau tien vua dac san Ninh Binh');
+define('DEFAULT_TITLE', 'Lon Muong Khuong dac san Lao Cai');
+define('DEFAULT_DESCRIPTION', 'Lon Muong Khuong dac san Lao Cai');
+define('DEFAULT_KEYWORDS', 'Lon Muong Khuong dac san Lao Cai');
 
 /**
  * SESSION timeout

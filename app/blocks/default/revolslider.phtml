@@ -1,5 +1,4 @@
 <!-- START SLIDER -->
-<script type="text/javascript" src="<?php echo SKIN_PATH?>default/plugins/revolslider/js/jquery_003.js"></script>
 <script type="text/javascript" src="<?php echo SKIN_PATH?>default/plugins/revolslider/js/jquery-migrate.js"></script>
 <script type="text/javascript" src="<?php echo SKIN_PATH?>default/plugins/revolslider/js/jquery.js"></script>
 <script type="text/javascript" src="<?php echo SKIN_PATH?>default/plugins/revolslider/js/jquery_009.js"></script>
@@ -8,7 +7,7 @@
 <link rel="stylesheet" id="rs-settings-css" href="<?php echo SKIN_PATH?>default/plugins/revolslider/css/settings.css" type="text/css" media="all">
 <link rel="stylesheet" id="rs-settings-css" href="<?php echo SKIN_PATH?>default/plugins/revolslider/css/captions.css" type="text/css" media="all">
 
-<div id="rev_slider_1_1" class="rev_slider fullwidthabanner tp-simpleresponsive hovered" style="height: 236px;">						
+<div id="rev_slider_1_1" class="rev_slider fullwidthabanner tp-simpleresponsive hovered">
     <ul style="display: block;">
         <?php foreach ($banners as $banner){?>
         <li style="visibility: visible; left: 0px; top: 0px; z-index: 20; opacity: 1;" data-transition="3dcurtain-vertical" data-slotamount="7">        
@@ -17,60 +16,5 @@
         <?php } ?>
     </ul>     
 </div>
-
-<script type="text/javascript">
-
-    var tpj=jQuery;
-				
-    tpj.noConflict();
-								
-    var revapi1;
-				
-    tpj(document).ready(function() {
-				
-        if (tpj.fn.cssOriginal != undefined)
-            tpj.fn.css = tpj.fn.cssOriginal;
-				
-        if(tpj('#rev_slider_1_1').revolution == undefined)
-            revslider_showDoubleJqueryError('#rev_slider_1_1');
-        else
-            revapi1 = tpj('#rev_slider_1_1').show().revolution(
-        {
-            delay:9000,
-            startwidth:649,
-            startheight:236,
-            hideThumbs:50,
-						
-            thumbWidth:100,
-            thumbHeight:50,
-            thumbAmount:3,
-						
-            navigationType:"none",
-            navigationArrows:"none",
-            navigationStyle:"round-old",
-						
-            touchenabled:"on",
-            onHoverStop:"on",
-						
-            navOffsetHorizontal:0,
-            navOffsetVertical:20,
-						
-            shadow:0,
-            fullWidth:"off",
-
-            stopLoop:"off",
-            stopAfterLoops:-1,
-            stopAtSlide:-1,
-
-            shuffle:"off",
-						
-            hideSliderAtLimit:0,
-            hideCaptionAtLimit:0,
-            hideAllCaptionAtLilmit:0					});
-				
-    });	//ready
-				
-</script>
+<script type="text/javascript" src="<?php echo SKIN_PATH?>default/plugins/revolslider/js/revolslider.js"></script>
 <!-- END SLIDER -->
-<span class="wpsr_floatbts_anchor" data-offset="25"></span>
-</div>

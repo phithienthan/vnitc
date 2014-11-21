@@ -4,7 +4,7 @@
      * @author quyetnd
      */
 
-    class default_block_header Extends baseBlock {
+    class default_block_image_lib Extends baseBlock {
 
         public function init() {
             $requestPath = $this->request->getRequestPath();
@@ -17,10 +17,6 @@
                 }                
             }            
             $this->data['menuHtml'] = $menuHtml;
-            //hotline
-            $contactModel = $this->model->get('contact');
-            $contactInfo = $contactModel->getContactInfo(1);
-            $this->data['hotline'] = $contactInfo['hotline'];
         }
 
     }

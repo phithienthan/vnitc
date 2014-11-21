@@ -3,20 +3,17 @@
 /**
  * @author quyetnd
  */
-Abstract Class baseBlock
+Abstract Class baseBlock extends view
 {
-
-    public $data = array();
-    protected $module;
+    
     protected $model;
     protected $name;
     protected $request;
 
     function __construct($blockName)
     {
+        parent::__construct();
         $this->model = baseModel::getInstance();
-        $mvcCore = mvcCore::getInstance();
-        $this->module = $mvcCore->module;
         $this->name = $blockName;
         $this->request = request::getInstance();
         $this->init();
@@ -35,12 +32,6 @@ Abstract Class baseBlock
             include $path;
         }
     }
-
-    public function redirect($url)
-    {
-        header("Location: $url");
-    }
-
 }
 
 ?>
