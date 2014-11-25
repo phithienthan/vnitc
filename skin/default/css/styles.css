@@ -191,6 +191,10 @@ hr {
     margin: 10px 25px 0 0;
 }
 /* footer */
+.footer{
+    width: 980px;
+    margin: 0 auto;
+}
 .footer_info img{
     float: left;
     margin: 10px;
