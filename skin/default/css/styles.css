@@ -124,6 +124,7 @@ hr {
     width: 240px;
     border: solid 1px #cccccc;
     box-shadow: 1px 1px 1px 1px #cccccc;
+    margin: 0 0 10px 0;
 }
 .title_box{
     border: solid 1px #ffffff;
