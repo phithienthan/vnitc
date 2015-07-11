@@ -1,7 +1,16 @@
-<div class="main_menu">                         
-    <ul>
-        <li class="active"><a href="#">Trang chủ</a></li>
-        <li><img src="<?php echo SKIN_PATH; ?>default/images/line.jpg" /></li>
+<!--MenuH-->
+<?php echo $scriptActive; ?>
+<div id="ddtabs4" class="ddcolortabs">
+    <ul>        
+        <li style="width:25px; float:left;">&nbsp;</li>
+        <li><a href="/" rel="ct1"><span>Trang chủ</span></a></li>
         <?php echo $menuHtml;?>
-    </ul>        
-</div><!-- main_menu -->
+    </ul>
+</div>
+<div class="tabcontainer">
+    <div id="ct1" class="tabcontent"> 
+        <?php echo DEFAULT_TITLE; ?>
+    </div>
+    <?php echo $subMenu; ?>    
+</div>        
+<!--End MenuH-->

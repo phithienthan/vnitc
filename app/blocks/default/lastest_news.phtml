@@ -1,23 +1,13 @@
-<div class="news_block fl">
-    <div class="title_box_news">
-        <div class="news_box_title fl"></div>
-        <div class="title_box_text">
-            Tin tức
-        </div>                            
-    </div>
-    <div class="news_box_list">
-        <ul>
-            <?php
-            $i = 0;
-            foreach ($lastestNews as $item) {
-            $i++;
-            ?>
-            <li>
-                <a href="/<?php echo $item['url_key']; ?>/"><?php echo $item['title']; ?></a>
-            </li> 
-            <?php
-            }
-            ?>                                    
-        </ul>
-    </div>                        
-</div><!-- news_block -->
+<div class="BoxLeft">
+    <div class="TitleLeft">Tin nổi bật</div>
+    <?php
+    $i = 0;
+    foreach ($lastestNews as $item) {
+        $i++;
+        ?>                            
+        <div class="HotNewsItem"><a href="/<?php echo $item['url_key']; ?>/"><?php echo $item['title']; ?></a></div>
+
+        <?php
+    }
+    ?>                          				
+</div>	

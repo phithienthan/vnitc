@@ -1,0 +1,78 @@
+.ddcolortabs{
+padding: 0;
+width: 1002px;
+height:35px;
+background:#FFF url(media/bg-menu-horizontal.jpg) repeat-x scroll 0 0;
+voice-family: "\"}\"";
+voice-family: inherit;
+}
+
+.ddcolortabs ul{
+font: bold 11px Tahoma;
+margin:0;
+height:35px;
+padding:0;
+display:block;
+list-style:none;
+}
+
+.ddcolortabs li{
+float:left;
+display:block;
+margin:0;
+padding:0;
+}
+
+.ddcolortabs a{
+float:left;
+color: white;
+margin:0;
+height: 35px;
+display:block;
+padding:0;
+text-decoration:none;
+}
+
+.ddcolortabs a span{
+float:left;
+height: 20px;
+display:block;
+padding: 12px 20px 3px 20px;
+}
+
+.ddcolortabs a:hover{
+	background: transparent url(media/bg-menu-horizontal-L.jpg) no-repeat left top;
+}
+
+.ddcolortabs a:hover span{
+	background: transparent url(media/bg-menu-horizontal-R.jpg) no-repeat right top;
+}
+
+.ddcolortabs a.current { /*currently selected tab*/
+	background: transparent url(media/bg-menu-horizontal-L.jpg) no-repeat left top;
+}
+.ddcolortabs a.current span {
+	background: transparent url(media/bg-menu-horizontal-R.jpg) no-repeat right top;
+	}
+
+.tabcontainer{
+clear: left;
+background:#FFF url(media/bg-sub-menu-horizontal.jpg) repeat-x scroll 0 0;
+color:#FFF;
+font-size:11px;
+font-family:Tahoma, Geneva, sans-serif;
+padding-top: 5px;
+width:1002px; /*width of 2nd level sub menus*/
+height: 25px; /*height of 2nd level sub menus. Set to largest's sub menu's height to avoid jittering.*/
+}
+
+.tabcontent {
+display:none;
+padding-left: 30px;
+}
+.tabcontent a {
+color:#FFF;
+}
+.tabcontent a:hover {
+text-decoration:underline;
+}

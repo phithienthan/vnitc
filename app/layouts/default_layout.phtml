@@ -2,32 +2,48 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title><?php echo $this->getTitle(); ?></title>
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
         <meta content="<?php echo $this->getDescription(); ?>" name="description" />
         <meta content="<?php echo $this->getKeywords(); ?>" name="keywords" />
         <meta content="INDEX,FOLLOW" name="robots" />
 
-        <script type="text/javascript" src="<?php echo SKIN_PATH ?>default/js/jquery-1.10.2.js"></script>            
+        <script type="text/javascript" src="<?php echo SKIN_PATH ?>default/js/jquery-1.10.2.js"></script>  
 
         <link href="<?php echo SKIN_PATH; ?>default/css/styles.css" rel="stylesheet" type="text/css" />        
-        <link rel="shortcut icon" href="<?php echo SKIN_PATH; ?>default/images/favicon.ico" />
+        <script type="text/javascript" src="<?php echo SKIN_PATH; ?>/default/plugins/tabmenu/ddtabmenu.js"></script>
+        <!-- CSS for Tab Menu #4 -->
+        <link rel="stylesheet" type="text/css" href="<?php echo SKIN_PATH; ?>/default/plugins/tabmenu/ddcolortabs.css" />
+        <script type="text/javascript" src="<?php echo SKIN_PATH; ?>default/plugins/tabmenu/vmenu.js"></script>
+        <link rel="shortcut icon" href="<?php echo SKIN_PATH; ?>default/images/favicon.ico" />        
     </head>
     <body>        
         <div class="wrapper">
             <div class="container">                         
                 <?php $this->block("header") ?>
-                <div class="main_body">
+
+
+                
+
+
+
+                <?php //$this->block("image_lib") ?>
+                
+
+                <div class="MainContent">
                     <?php $this->block("left") ?>
-                    <div class="right_panel fl">
-                        <div class="main_content fl">                        
-                            <?php $this->content() ?>
-                        </div>
-                        <div class="clr"></div>
-                        <?php $this->block("image_lib") ?>
-                        <?php $this->block("lastest_news") ?>
-                    </div><!-- right_panel -->     
-                    <div class="clr"></div>
-                </div><!-- main_body -->            
+
+                    <!--Column Right-->
+                    <div class="ColumnRight">
+                        <!--ImageRotator-->
+                        <?php $this->block("revolslider") ?>
+                        <?php $this->content() ?>                                
+
+                    </div>
+                    <!--End Column Right -->
+                    <div style="clear:both;"></div>
+                </div>
+
                 <?php $this->block("footer") ?>
             </div>
         </div>                                                                                    

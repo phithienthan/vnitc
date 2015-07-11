@@ -1,0 +1,7 @@
+<div class="TitleLeft1">Lĩnh vực kinh doanh</div>
+<?php $i = 0; ?>
+<?php foreach ($categories as $menuItem) {
+    $i++; ?>
+    <div class="CSSmenu<?php echo $i ?>"><a href="<?php echo $menuItem['url_key']; ?>"><?php echo $menuItem['title']; ?></a></div>
+<?php } ?>
+<div style="height:25px;"></div>

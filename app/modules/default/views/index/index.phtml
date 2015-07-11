@@ -1,3 +1,15 @@
-<?php foreach ($articles as $article) { ?>
-    <?php echo $article['detail']; ?>
-<?php } ?>                            
+<!--Introduction-->
+<div class="BoxRight">
+    <div class="BorderBottom">
+        <div class="BoxRightCL"></div>
+        <div class="BoxRightCC">Giới thiệu về công ty</div>
+        <div class="BoxRightCR"></div>    									
+        <div style="clear:both;"></div>
+    </div>
+    <div class="NewsItem">
+        <?php foreach ($articles as $article) { ?>
+            <?php echo $article['detail']; ?>
+        <?php } ?>         
+    </div>
+</div>
+<!--End Introduction-->		

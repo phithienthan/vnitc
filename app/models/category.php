@@ -47,11 +47,18 @@ Class categoryModel Extends baseModel
 
     public function getByParentIdAndPost($parent_id, $post)
     {
-        $qr = 'SELECT * FROM ' . $this->_table . ' cate INNER JOIN sf_category_position pos ON cate.id = pos.category_id where pos.position_id = ' . $this->_mysql->quote($post) . ' AND parent_id = ' . $this->_mysql->quote($parent_id) . ' order by sort_order ASC';
+        $qr = 'SELECT cate.* FROM ' . $this->_table . ' cate INNER JOIN sf_category_position pos ON cate.id = pos.category_id where pos.position_id = ' . $this->_mysql->quote($post) . ' AND parent_id = ' . $this->_mysql->quote($parent_id) . ' order by sort_order ASC';
         $category_detail = $this->_mysql->execute_query_to_array($qr);
         return $category_detail;
     }
 
+    public function getByPost($post)
+    {
+        $qr = 'SELECT cate.* FROM ' . $this->_table . ' cate INNER JOIN sf_category_position pos ON cate.id = pos.category_id where pos.position_id = ' . $this->_mysql->quote($post) . ' order by sort_order ASC';
+        $category_detail = $this->_mysql->execute_query_to_array($qr);
+        return $category_detail;
+    }
+    
     public function getParentArtCate($parent_id)
     {
         $qr = "SELECT * FROM " . $this->_table . " where type in ('news','about') AND parent_id = " . $this->_mysql->quote($parent_id) . " order by sort_order ASC";

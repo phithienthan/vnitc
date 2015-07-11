@@ -1,0 +1,46 @@
+<?php
+if ($linkInfo == null) {
+    $pageTitle = "Thêm mới liên kết";
+    $linkInfo["title"] = "";
+    $linkInfo["link"] = "";
+    $linkInfo["img_path"] = "";
+    $linkInfo['status'] = 1;
+} else {
+    $pageTitle = "Sửa banner";
+}
+?>
+<form id="edit_form" action="/admin/link/post/id/<?php echo $id ?>" method="post" enctype="multipart/form-data">
+    <div class="lblHeader"><h2><?php echo $pageTitle ?></h2></div>
+    <div class="clr"></div>
+    <div class="fl cateL">
+        <div class="lblCategory fl">Tên liên kết: </div><div class="fl lineSpace"><input type="text" class="input-text" title="title" value="<?php echo $linkInfo['title'] ?>" name="title" id="title"></div>
+        <div class="lblCategory fl">Đường dẫn: </div><div class="fl lineSpace"><input type="text" class="input-text" title="link" value="<?php echo $linkInfo['link'] ?>" name="link" id="link"></div>
+        <div class="lblCategory fl">Ảnh: </div>
+        <div class="fl lineSpace">       
+            <div class="image_des fl">
+                <img src="<?php
+                if ($linkInfo['img_path'] != "") {
+                    echo AVATAR_PATH . $linkInfo['img_path'];
+                } else {
+                    echo "/skin/default/images/no-image.png";
+                }
+                ?>" height="30px" />
+            </div>
+            <div class="upload_file fl">            
+                <input type="file" name="file" id="file">
+                <input type="hidden" name="img_path" id="img_path" value="<?php echo $linkInfo['img_path'] ?>" />
+            </div>                
+        </div>
+        <div class="clr"></div>        
+
+        <div class="lblCategory fl">Trạng thái</div>
+        <div class="fl lineSpace">
+            <select name="status" id="status">
+                <option <?php if ($linkInfo['status'] == '0') { ?>selected="selected"<?php } ?> value="0">Khóa</option>
+                <option <?php if ($linkInfo['status'] == '1') { ?>selected="selected"<?php } ?> value="1">Hoạt động</option>
+            </select>                        
+        </div>           
+        <div class="clr"></div> 
+        <div class="lblCategory fl"></div><div class="fl lineSpace"><input type="submit" title="Lưu" id="cmd_submit" value="Lưu" /></div>            
+    </div>
+</form>

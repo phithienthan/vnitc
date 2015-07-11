@@ -15,8 +15,8 @@ tpj(document).ready(function () {
         revapi1 = tpj('#rev_slider_1_1').show().revolution(
                 {
                     delay: 5000,
-                    startwidth: 730,
-                    startheight: 190,
+                    startwidth: 720,
+                    startheight: 324,
                     hideThumbs: 50,
                     thumbWidth: 100,
                     thumbHeight: 50,

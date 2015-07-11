@@ -1,205 +1,314 @@
-HTML, BODY {
-    background-color:#008c35; 
-    font: 12px Arial, Tahoma, Verdana, Helvetica, sans-serif; 
-    color: #2c2c2c; 
+* {
     margin: 0;
+    padding: 0;
 }
-a {
+body{ 
+    background: #c4876c url(../images/bg-top.jpg) repeat-x scroll center top;
+    font-family:tahoma;
+    font-size: 11px;
+    color:#000;
+}
+a {	
     text-decoration:none;
-    color: #2c2c2c;
+    color:#764936;
+}
+img {
+    border:0px;
+}	
+p, form {
+    margin:0;
+    padding:0;
+}
+ul, ol {
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+li {
+    margin:0;
+    padding:0;
 }
 
-img {
-    border:0;
+/*++++++Container+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.wrapper{ 
+    background: transparent url(../images/bg-bot.jpg) no-repeat scroll center bottom; text-align:left;
 }
-p {
+.container{ width: 1002px; margin: 0 auto; margin-top:20px;
+            background: #ffffff url(../images/bg-site.jpg) no-repeat scroll center top;}
+.ColumnLeft{
+    width:250px;
+    margin: 5px 10px 10px 10px;
+    float:left;
+}	
+.ColumnRight{
+    margin: 5px 10px 10px 0px;
+    float:left;
+    width: 720px;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.Top { height: 140px; background: #f7f3d6;}
+.logo { margin: 5px 20px 10px 30px; float:left;}
+.CompanyName { float:left; color:#bf0103;font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:20px; margin: 40px 10px 40px 10px;}
+.TitleLeft1 { 
+    font-family: tahoma; font-weight:bold; text-transform:uppercase; color:#025A9A; font-size:13px;
+    margin-bottom:10px;
+}
+.TitleLeft { 
+    font-family: tahoma; font-weight:bold; text-transform:uppercase; color:#025A9A; font-size:13px;
+    margin-bottom:10px;
+    margin: 10px 10px 10px 10px;
+    width: 230px;
+}
+.BoxLeft{
+    margin-top: 8px;
+    border: solid 1px #AEAEAE;
+    background:#F5F1F0;	
+    float:left;
+}
+.BoxRight{
+    margin-top: 8px;
+    border: solid 1px #AEAEAE;
+    background:#F5F1F0;	
+    float:left;	
+    width:720px;
+}
+.BoxRightCL{
+    width:14px;
+    height:36px;
+    background:#F5F1F0 url(../images/TitleBgL.jpg) no-repeat top left;
+    float:left;
+}
+.BoxRightCC{
+    height:36px;
+    background:#F5F1F0 url(../images/TitleBgC.jpg) repeat-x top;
+    float:left;
+    padding: 15px 10px 0px 10px;
+    font-weight:bold;
+    color:#CB1106;
+}
+.BoxRightCR{
+    width:4px;
+    height:36px;
+    background:#F5F1F0 url(../images/TitleBgR.jpg) no-repeat top right;
+    float:left;	
+}
+.BorderBottom
+{   
+    border-bottom: solid 1px #A64F27;
+    height:35px;
+}
+.NewsItem{
+    padding: 10px 10px 10px 10px;
     line-height: 20px;
 }
-h1{
-    font-size: 12px;
-    color: #b66901;
+.NewsItem img{
+    margin: 0 10px 10px 0px;
 }
-hr {
-    border: 0 none;  
-    color: #b66901;
-    background-color: #b66901;         
-    height: 1px;     
-}
-/* Common */
-.fl{
-    float: left;
-}
-.fr{
-    float: right;
-}
-.clr{
-    clear: both; 
-}
-/* Layout */
-.wrapper{
-    width: 100%;
-}
-.container{
-    width: 1000px;
-    margin: 0 auto;
-    background: #ffffff;
-}
-.main_body{
-    width: 980px;
-    margin: 10px auto;        
-}
-.right_panel{
-    width: 720px;
-    margin: 0 0 0 10px;
-}
-.main_content{
-    margin: 0 0 20px 0;
-}
-/* End layout */
-/* header content */
-.banner img{
-    width: 700px;
-    height: 160px;
-    margin: 5px 0 5px 20px;
-    position:relative;
-}
-.banner{
-    width: 730px;
-    height: 190px;
-    margin: 5px 0 0 20px;
-}
-.logo img{
-    width: 230px;
-    height: 190px;
-    margin: 5px 0 5px 10px;
-}
-.top{
-    height: 200px;
-}
-/* End header content */
-/* main menu */
-.main_menu{
-    background: url(../images/menu_bg.jpg) repeat-x;
-    width: 980px;
-    margin: 0 auto;
-    height: 26px;
-    font-family: Tahoma;
-    font-size: 10px;
-}
-.main_menu ul{
-    list-style-type:none;
-    padding:0px;
-    margin:0px 20px;
-}
-
-.main_menu ul li{
-    display:inline;
-}
-
-.main_menu ul a{
-    text-decoration:none;
-    float:left;
-    color:#ffffff;
-    text-transform: uppercase;
+.Detail a{
+    color:#FF0000;
     font-weight:bold;
-    text-align:center;
-    line-height:26px;    
-    padding: 0 10px;
 }
-.main_menu ul li img{
-    float: left;
+.Detail a:hover{
+    text-decoration:underline;
 }
-.main_menu .active a{
-    background: yellow;    
-    background: url(../images/menu_active.jpg) repeat-x;
-    padding: 0 10px;
+.HotNewsItem{
+    width: 210px;
+    margin:0px 10px 0px 10px;
+    padding: 4px 10px 7px 10px;
+    background:#F5F1F0 url(../images/Bullet.jpg) no-repeat left;
 }
-/* box_title */
-.left_box_title{
-    width: 21px;
-    height: 23px;    
-    background: #02a21a url(../images/left_box_title.jpg) no-repeat;    
+.HotNewsItem a:hover{
+    text-decoration:underline;
 }
-.left_block{
-    width: 240px;
-    border: solid 1px #cccccc;
-    box-shadow: 1px 1px 1px 1px #cccccc;
-    margin: 0 0 10px 0;
+.advItem{
+    margin: 10px 10px 10px 15px;
 }
-.title_box{
-    border: solid 1px #ffffff;
-    background: #02a21a url(../images/box_title_bg.jpg) repeat-x;
-    height: 23px;
-    line-height: 23px;
-    color: #ffffff;
-    font-family: Tahoma;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 10px;
-}
-.left_box_list ul{
-    list-style-image: url(../images/bullet.jpg);
-    margin: 0;
-    padding: 5px 0 0 0px;        
-}
-
-.left_box_list ul li {
-    margin: 8px 0 8px 30px;
-    border-bottom: dotted 1px #ccc;    
-    padding: 0 0 8px 0;
-}
-/* box_news */
-.news_box_title{
-    width: 21px;
-    height: 23px;    
-    background: #02a21a url(../images/news_box_title.jpg) no-repeat;    
-}
-.news_block{
-    width: 208px;
-    border: solid 1px #cccccc;
-    box-shadow: 1px 1px 1px 1px #cccccc;
-    margin: 0 0 0 10px;
-}
-.title_box_news{
-    border: solid 1px #ffffff;
-    background: #02a21a url(../images/box_title_news_bg.jpg) repeat-x;
-    height: 23px;
-    line-height: 23px;
-    color: #ffffff;
-    font-family: Tahoma;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 10px;
-}
-.news_box_list ul{
-    /*list-style-image: url(../images/bullet.jpg);*/
-    list-style: square;
-    margin: 0;
-    padding: 5px 0 0 0px;        
-}
-
-.news_box_list ul li {
-    margin: 8px 0 8px 30px;
-    border-bottom: dotted 1px #ccc;    
-    padding: 0 0 8px 0;
-}
-/* right content */
-.images_library{
-    width: 500px;
-}
-.img_item img{
-    width: 140px;
-    margin: 10px 25px 0 0;
-}
-/* footer */
 .footer{
-    width: 980px;
-    margin: 0 auto;
+    background:#f7f3d6;
+    height:110px;
+    margin-bottom:15px;
+    line-height: 20px;
+    padding: 15px 10px 10px 270px;
+    margin-top: 10px;
 }
-.footer_info img{
-    float: left;
-    margin: 10px;
+/*+++++++++++++++++++++++++++++MenuL++++++++++++++++++++++++++++*/
+.copyright{
+    font-weight:bold;
+    height: 10px;
+    padding: 10px 10px 10px 0px;
+    text-align:right;
+    color:#a74e27;
 }
-.footer_info p{
-    font-weight: normal;
+
+#DivMenu UL LI {
+    FLOAT: left;
 }
+#DivMenu LI A 
+{
+    font-weight:bold;
+    border-top: solid 1px #ccc;
+    width: 220px;	
+    margin:0px 10px 0px 10px;
+    padding: 10px 10px 10px 0px;		   
+    background:#F5F1F0 url(../images/arrow.jpg) no-repeat right;
+    display:block;		
+}
+#DivMenu LI A:hover {
+    text-decoration: none;
+    background:#fff url(../images/arrow.jpg) no-repeat right;
+    color:#060;
+    display:block;
+}
+
+#DivMenu UL LI UL {
+    MARGIN-TOP: -21px; DISPLAY: none; POSITION: absolute
+}
+#DivMenu LI A:link{
+    display: block;	
+}
+/*+++++++++++++++++++++++++++++End MenuL++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++Product++++++++++++++++++++++++++++*/
+.ProItem{
+    margin: 10px 10px 10px 42px;
+    float:left;
+    width:120px;
+}
+
+.ProItem img{
+    margin: 10px 10px 10px 0px;
+}
+.MayXuc{
+    margin: 10px 0px 10px 42px;
+    float:left;
+    width:190px;
+}
+
+.MayXuc img{
+    margin: 10px 0px 10px 0px;
+    width: 180px;
+}
+
+/*+++++++++++++++++++++++++++++End Product++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++Linh Vuc Kinh Doanh++++++++++++++++++++++++++++*/
+.CSSmenu {
+    font-size: 11px;
+    border-bottom: 1px solid #E4E4E4;
+    height:44px;
+    text-align:left;
+}
+.CSSmenu A {
+    display:block; background: url(../images/icon-1.jpg) no-repeat scroll 5px 50%;
+    font-weight:bold;
+    height:29px;
+    padding: 15px 0 0 55px;
+    color: #6f4934;
+}
+.CSSmenu A:hover {
+    display:block; background: url(../images/icon-1a.jpg) #EAEAEA no-repeat scroll 5px 50%;
+    height:29px;
+    color:#00528e;
+    padding: 15px 0 0 55px;
+    text-decoration:underline;
+}
+.CSSmenu1 {
+    font-size: 11px;
+    border-bottom: 1px solid #E4E4E4;
+    height:44px;
+    text-align:left;
+}
+.CSSmenu1 A {
+    display:block; background: url(../images/icon-2.jpg) no-repeat scroll 5px 50%;
+    font-weight:bold;
+    height:29px;
+    padding: 15px 0 0 55px;
+    color: #6f4934;
+}
+.CSSmenu1 A:hover {
+    display:block; background: url(../images/icon-2a.jpg) #EAEAEA no-repeat scroll 5px 50%;
+    height:29px;
+    color:#00528e;
+    padding: 15px 0 0 55px;
+    text-decoration:underline;
+}
+.CSSmenu2 {
+    font-size: 11px;
+    border-bottom: 1px solid #E4E4E4;
+    height:44px;
+    text-align:left;
+}
+.CSSmenu2 A {
+    display:block; background: url(../images/icon-3.jpg) no-repeat scroll 5px 50%;
+    font-weight:bold;
+    height:29px;
+    padding: 15px 0 0 55px;
+    color: #6f4934;
+}
+.CSSmenu2 A:hover {
+    display:block; background: url(../images/icon-3a.jpg) #EAEAEA no-repeat scroll 5px 50%;
+    height:29px;
+    color:#00528e;
+    padding: 15px 0 0 55px;
+    text-decoration:underline;
+}
+.CSSmenu3 {
+    font-size: 11px;
+    border-bottom: 1px solid #E4E4E4;
+    height:44px;
+    text-align:left;
+}
+.CSSmenu3 A {
+    display:block; background: url(../images/icon-4.jpg) no-repeat scroll 5px 50%;
+    font-weight:bold;
+    height:29px;
+    padding: 15px 0 0 55px;
+    color: #6f4934;
+}
+.CSSmenu3 A:hover {
+    display:block; background: url(../images/icon-4a.jpg) #EAEAEA no-repeat scroll 5px 50%;
+    height:29px;
+    color:#00528e;
+    padding: 15px 0 0 55px;
+    text-decoration:underline;
+}
+.CSSmenu4 {
+    font-size: 11px;
+    border-bottom: 1px solid #E4E4E4;
+    height:45px;
+    text-align:left;
+}
+.CSSmenu4 A {
+    display:block; background: url(../images/icon-5.jpg) no-repeat scroll 5px 50%;
+    font-weight:bold;
+    height:30px;
+    padding: 15px 0 0 55px;
+    color: #6f4934;
+}
+.CSSmenu4 A:hover {
+    display:block; background: url(../images/icon-5a.jpg) #EAEAEA no-repeat scroll 5px 50%;
+    height:30px;
+    color:#00528e;
+    padding: 15px 0 0 55px;
+    text-decoration:underline;
+}
+.CSSmenu5 {
+    font-size: 11px;
+    height:45px;
+    text-align:left;
+}
+.CSSmenu5 A {
+    display:block; background: url(../images/icon-6.jpg) no-repeat scroll 5px 50%;
+    font-weight:bold;
+    height:30px;
+    padding: 15px 0 0 55px;
+    color: #6f4934;
+}
+.CSSmenu5 A:hover {
+    display:block; background: url(../images/icon-6a.jpg) #EAEAEA no-repeat scroll 5px 50%;
+    height:30px;
+    color:#00528e;
+    padding: 15px 0 0 55px;
+    text-decoration:underline;
+}
+/*++++++++++++++++++++++++++++++=End Linh Vuc Kinh Doanh+++++++++++++++++++++++++++++*/

@@ -44,7 +44,18 @@
                 <title>Danh sách banner</title>                
                 <action>banner/index</action>
             </children>         
-        </items>          
+        </items>      
+        <items controller="link">
+            <title>Liên kết website</title>    
+            <children action="edit">
+                <title>Thêm liên kết</title>                
+                <action>link/edit</action>
+            </children>
+            <children action="index">
+                <title>Danh sách liên kết</title>                
+                <action>link/index</action>
+            </children>         
+        </items>             
         <items controller="user">
             <title>Người dùng</title>    
             <children action="edit">

@@ -1,24 +1,18 @@
-<div class="left_panel fl">
-    <div class="left_block">
-        <div class="title_box">
-            <div class="left_box_title fl"></div>
-            <div class="title_box_text">
-                Liên kết website
-            </div>                            
-        </div>
-        <div class="left_box_list">
-            <ul>
-                <li>
-                    <a href="#">Lợn Mường Khương</a>
-                </li>                                
-                <li>
-                    <a href="#">Lợn Mường Khương</a>
-                </li>        
-                <li>
-                    <a href="#">Lợn Mường Khương Lợn Mường Khương</a>
-                </li>                                 
-            </ul>
-        </div>                        
-    </div><!-- left_block -->    
-    <?php $this->block("vnexpress") ?>
-</div><!-- left_panel -->
+<!--ColumnLeft-->
+<div class="ColumnLeft">
+    <?php $this->block("menu_left") ?>    																								    
+    <?php $this->block("lastest_news") ?>
+    <div class="BoxLeft">
+        <div class="TitleLeft">Liên kết website</div>
+            <?php foreach ($links as $item) { ?>                
+                <div class="HotNewsItem"><a href="<?php echo $item['link']; ?>" target="_blank"><?php echo $item['title']; ?></a></div>
+            <?php } ?>          				
+    </div>	
+<!--    <div class="BoxLeft">
+        <div class="TitleLeft">Đối tác</div>
+        <div class="advItem"><a href="#">
+                <img src="images/Castrol.jpg" />
+            </a></div>
+    </div>																				-->
+</div>
+<!--End column Left-->
