@@ -8,7 +8,7 @@
  */
 define('DB_HOST', '127.0.0.1'); // IP host
 define('DB_USER', 'root'); // User database
-define('DB_PASS', '123456'); // Password database
+define('DB_PASS', ''); // Password database
 define('DB_NAME', 'lonmuong_db'); // Database name
 
 /**
