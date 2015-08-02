@@ -1,46 +1,53 @@
-<div id="hot">
-    <div class="hot-new1">
-        <a href="/<?php echo $article['url_key']; ?>/"><img src="<?php echo AVATAR_RESIZE_PATH . "/280x200/" . $articles[0]['avatar_url'] ?>"></a>
-        <a href="/<?php echo $article['url_key']; ?>"><?php echo $articles[0]['title']; ?></a>
-        <p><?php echo $articles[0]['description']; ?></p>
-    </div>
-    <div style="clear:both;"></div>             		                                                
-
-</div>
-<div id="OtherNews">
-    <div class="BorderBottom">
-        <div class="BoxRightCL"></div>
-        <div class="BoxRightCC">CÁC TIN TIẾP THEO</div>
-        <div class="BoxRightCR"></div>
-    </div>					
-    <div style="clear:both;"></div>
-    <?php foreach ($articles as $article) { ?>              
-        <div class="news">
-            <div class="news-left1">
-                <?php if ($article['avatar_url'] != NULL) { ?>
-                    <a href="/<?php echo $article['url_key']; ?>/"><img src="<?php echo AVATAR_RESIZE_PATH . "/180x110/" . $article['avatar_url'] ?>"></a>                     
-                <?php } ?>
-                <p class="news_title"><a href="/<?php echo $article['url_key']; ?>"><?php echo $article['title']; ?></a></p>
-                <?php echo $article['description']; ?>
-            </div>
+<?php
+if (count($articles) > 0) {
+    ?>
+    <div id="hot">
+        <div class="hot-new1">
+            <a href="/<?php echo $articles[0]['url_key']; ?>/"><img src="<?php echo AVATAR_RESIZE_PATH . "/280x200/" . $articles[0]['avatar_url'] ?>"></a>
+            <a href="/<?php echo $articles[0]['url_key']; ?>"><?php echo $articles[0]['title']; ?></a>
+            <p><?php echo $articles[0]['description']; ?></p>
         </div>
-        <div style="clear:both;"></div>
-    </span><br>
+        <div style="clear:both;"></div>             		                                                
+    </div>
 <?php } ?>
+<?php if (count($articles) > 1) {?>
+    <div id="OtherNews">
+        <div class="BorderBottom">
+            <div class="BoxRightCL"></div>
+            <div class="BoxRightCC">CÁC TIN TIẾP THEO</div>
+            <div class="BoxRightCR"></div>
+        </div>					
+        <div style="clear:both;"></div>
+        <?php $i = 0; ?>
+        <?php if(count($articles) > 1){ ?>
+            <?php foreach ($articles as $article) { $i++; ?>     
+                <?php if($i > 1){?>
+                <div class="news">
+                    <div class="news-left1">
+                        <?php if ($article['avatar_url'] != NULL) { ?>
+                            <a href="/<?php echo $article['url_key']; ?>/"><img src="<?php echo AVATAR_RESIZE_PATH . "/180x110/" . $article['avatar_url'] ?>"></a>                     
+                        <?php } ?>
+                        <p class="news_title"><a href="/<?php echo $article['url_key']; ?>"><?php echo $article['title']; ?></a></p>
+                        <?php echo $article['description']; ?>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+                <br>
+                <?php } ?>
+            <?php } ?>
+        <?php } ?>
 
-<!--<div id="ctl00_NewinContentList1_paginator">
+    <!--<div id="ctl00_NewinContentList1_paginator">
 
-    <div class="Paginator">
-        <span class="AtStart">Trang&nbsp;</span>
-        <a href="/portalid/32/tabid/114/page/1/zonelink/Tin-trong-nuoc.html"> <b> 1</b></a><a href="/portalid/32/tabid/114/page/2/zonelink/Tin-trong-nuoc.html">2</a><a href="/portalid/32/tabid/114/page/3/zonelink/Tin-trong-nuoc.html">3</a><a href="/portalid/32/tabid/114/page/4/zonelink/Tin-trong-nuoc.html">4</a><a href="/portalid/32/tabid/114/page/5/zonelink/Tin-trong-nuoc.html">5</a></div>
+        <div class="Paginator">
+            <span class="AtStart">Trang&nbsp;</span>
+            <a href="/portalid/32/tabid/114/page/1/zonelink/Tin-trong-nuoc.html"> <b> 1</b></a><a href="/portalid/32/tabid/114/page/2/zonelink/Tin-trong-nuoc.html">2</a><a href="/portalid/32/tabid/114/page/3/zonelink/Tin-trong-nuoc.html">3</a><a href="/portalid/32/tabid/114/page/4/zonelink/Tin-trong-nuoc.html">4</a><a href="/portalid/32/tabid/114/page/5/zonelink/Tin-trong-nuoc.html">5</a></div>
 
-</div>-->
-<div style="height: 15px;"></div>        
-<div style="clear:both;"></div>
-</div>
-
-
-
+    </div>-->
+    <div style="height: 15px;"></div>        
+    <div style="clear:both;"></div>
+    </div>
+<?php } ?>
 
 
 

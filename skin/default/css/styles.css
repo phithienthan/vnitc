@@ -354,3 +354,14 @@ li {
     text-decoration:underline;
 }
 /*++++++++++++++++++++++++++++++=End Linh Vuc Kinh Doanh+++++++++++++++++++++++++++++*/
+.feed-back-content{
+    width: 600px !important;
+    height: 150px !important;
+}
+.input-text{
+    width: 300px;
+    height: 22px;
+}
+.lblFeedback {
+    margin: 10px 0 5px 0;
+}
