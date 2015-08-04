@@ -189,14 +189,14 @@ Class productController Extends adminController
             // *** 1) Initialise / load image
             $resizeObj = new resize($avatarUrl);
             // *** 2) Resize image (options: exact, portrait, landscape, auto, crop)
-            $resizeObj->resizeImage(180, 110, 'crop');
+            $resizeObj->resizeImage(90, 140, 'crop');
             $savePath = ROOT . AVATAR_RESIZE_PATH;
             // *** 3) Save image
-            $resizeObj->saveImage($savePath . "180x110/" . $newName, 100);
+            $resizeObj->saveImage($savePath . "90x140/" . $newName, 100);
             // *** 2) Resize image (options: exact, portrait, landscape, auto, crop)
-            $resizeObj->resizeImage(280, 200, 'crop');
+            $resizeObj->resizeImage(180, 280, 'crop');
             // *** 3) Save image
-            $resizeObj->saveImage($savePath . "280x200/" . $newName, 100);
+            $resizeObj->saveImage($savePath . "180x280/" . $newName, 100);
         }
         /* end upload image */
         $params["url_key"] = $params['pro_name'];

@@ -1,15 +1,13 @@
-<section class="main_content">                                        
-    <section class="content_detail">
-        <section class="sec_content fl">
-            <header>
-                <?php echo $categoryInfo['title']; ?>
-                <div class="date_time"><?php $publicTime = new DateTime($article['public_time']);
-                echo date_format($publicTime, 'g:i A');
-                ?> Ngày <?php echo date_format($publicTime, 'd/m/Y'); ?></div>
-            </header>
-            <div class="news_item">                
-<?php echo $article['detail']; ?>
-            </div>                    
-        </section>        
-    </section>
-</section>    
+<div class="BoxRight">
+    <div class="BorderBottom">
+        <div class="BoxRightCL"></div>
+        <div class="BoxRightCC">
+            <a id="ctl00_About1_rpt_head_ctl00_HplTitle"><?php echo $categoryInfo['title']; ?></a>
+        </div>
+        <div class="BoxRightCR"></div>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="NewsContent">
+        <?php echo $article['detail']; ?>
+    </div>
+</div>

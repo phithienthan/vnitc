@@ -213,13 +213,15 @@ li {
 /*+++++++++++++++++++++++++++++End MenuL++++++++++++++++++++++++++++*/
 /*+++++++++++++++++++++++++++++Product++++++++++++++++++++++++++++*/
 .ProItem{
+    float: left;
+    height: 200px;
     margin: 10px 10px 10px 42px;
-    float:left;
-    width:120px;
+    width: 120px;
 }
-
 .ProItem img{
-    margin: 10px 10px 10px 0px;
+    height: 140px;
+    margin: 10px 10px 10px 0;
+    width: 90px;
 }
 .MayXuc{
     margin: 10px 0px 10px 42px;
@@ -364,4 +366,15 @@ li {
 }
 .lblFeedback {
     margin: 10px 0 5px 0;
+}
+.LogoItem {
+    float: left;
+    height: 140px;
+    margin: 10px 10px 10px 20px;
+    width: 140px;
+}
+.LogoItem img {
+    height: 120px;
+    margin: 10px 10px 10px 0;
+    width: 120px;
 }

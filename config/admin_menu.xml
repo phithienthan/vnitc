@@ -24,13 +24,13 @@
             </children>                            
         </items>          
         <items controller="product">
-            <title>Thư viện ảnh</title>    
+            <title>Sản phẩm</title>    
             <children action="edit">
-                <title>Thêm ảnh</title>                
+                <title>Thêm sản phẩm</title>                
                 <action>product/edit</action>
             </children>
             <children action="list">
-                <title>Danh sách ảnh</title>                
+                <title>Danh sách sản phẩm</title>                
                 <action>product/list</action>
             </children>               
         </items>            

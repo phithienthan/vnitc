@@ -1,22 +1,22 @@
-<section class="main_content">                                        
-    <section class="content_detail">
-        <section class="sec_content fl">
-            <header>
-                <?php echo $categoryInfo['title']; ?>
-            </header>
-            <?php foreach ($products as $product) { ?>                    
-                <article>
-                    <?php if ($product['pro_image'] != NULL) { ?>
-                        <div class="cover" style="background-image: url(&quot;<?php echo AVATAR_RESIZE_PATH . "/180x110/" . $product['pro_image'] ?>&quot;);"><a href="/<?php echo $product['url_key']; ?>/"></a></div>
-                    <?php } else { ?>
-                        <div class="cover" style="background-image: url(&quot;<?php echo AVATAR_RESIZE_PATH . "180x110/" . $product['pro_image'] ?>&quot;);"><a href="/<?php echo $product['url_key']; ?>/"></a></div>
-                    <?php } ?>
-                    <header>
-                        <p class="news_title"><a href="/<?php echo $product['url_key']; ?>"><?php echo $product['pro_name']; ?></a></p>
-                            <?php //echo $product['description']; ?>
-                    </header>                    
-                </article>                    
+<div class="BoxRight">
+    <div class="BorderBottom">
+        <div class="BoxRightCL"></div>
+        <div class="BoxRightCC"><?php echo $categoryInfo['title']; ?></div>
+        <div class="BoxRightCR"></div>
+    </div>
+    <div style="clear:both;"></div>
+    <?php foreach ($products as $product) { ?>    
+    <div class="ProItem">        
+        <a href="/<?php echo $product['url_key']; ?>/">
+            <?php if ($product['pro_image'] != NULL) { ?>
+                <img width="91" src="<?php echo AVATAR_RESIZE_PATH . "/90x140/" . $product['pro_image'] ?>">
+            <?php } else { ?>
+                <img width="91" src="<?php echo SKIN_PATH ?>default/images/no-image.png">
             <?php } ?>
-        </section>                        
-    </section>
-</section>    
+        </a>
+        <a href="/<?php echo $product['url_key']; ?>/">
+        <?php echo $product['pro_name']; ?>
+        </a>            
+    </div>
+    <?php } ?>
+</div>
