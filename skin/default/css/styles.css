@@ -378,3 +378,15 @@ li {
     margin: 10px 10px 10px 0;
     width: 120px;
 }
+
+.proLeft {
+    float: left;
+    width: 480px;
+}
+
+.proRight {
+    float: left;
+}
+.proDetail {
+    margin: 10px;
+}
