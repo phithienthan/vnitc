@@ -5,15 +5,37 @@
     <?php $this->block("lastest_news") ?>
     <div class="BoxLeft">
         <div class="TitleLeft">Liên kết website</div>
-            <?php foreach ($links as $item) { ?>                
-                <div class="HotNewsItem"><a href="<?php echo $item['link']; ?>" target="_blank"><?php echo $item['title']; ?></a></div>
-            <?php } ?>          				
+        <?php foreach ($links as $item) { ?>                
+            <div class="HotNewsItem"><a href="<?php echo $item['link']; ?>" target="_blank"><?php echo $item['title']; ?></a></div>
+        <?php } ?>          				
     </div>	
-<!--    <div class="BoxLeft">
+    <div class="BoxLeft">
         <div class="TitleLeft">Đối tác</div>
-        <div class="advItem"><a href="#">
-                <img src="images/Castrol.jpg" />
-            </a></div>
-    </div>																				-->
+        <div class="advItem">
+            <a href="http://vit.net.vn">                
+                <img border="0" width="218px" src="<?php echo SKIN_PATH ?>default/images/partner/Castrol.JPG">
+            </a>
+        </div>
+        <div class="advItem">
+            <a href="http://vit.net.vn">                
+                <img border="0" width="218px" src="<?php echo SKIN_PATH ?>default/images/partner/ktqd.JPG">
+            </a>
+        </div>
+        <div class="advItem">
+            <a href="http://vit.net.vn">                
+                <img border="0" width="218px" src="<?php echo SKIN_PATH ?>default/images/partner/mobil.JPG">
+            </a>
+        </div>       
+        <div class="advItem">
+            <a href="http://vit.net.vn">                
+                <img border="0" width="218px" src="<?php echo SKIN_PATH ?>default/images/partner/shell.JPG">
+            </a>
+        </div>    
+        <div class="advItem">
+            <a href="http://vit.net.vn">                
+                <img border="0" width="218px" src="<?php echo SKIN_PATH ?>default/images/partner/total.JPG">
+            </a>
+        </div>            
+    </div>
 </div>
 <!--End column Left-->
