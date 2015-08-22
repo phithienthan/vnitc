@@ -158,3 +158,26 @@
 </div>
 <!-- End thuong hieu -->
 <!-- Product -->
+<div class="BoxRight">
+    <div class="BorderBottom">
+        <div class="BoxRightCL"></div>
+        <div class="BoxRightCC">Sản phẩm mới nhất</div>
+        <div class="BoxRightCR"></div>
+    </div>		
+    <div style="clear:both;"></div>	
+    <?php foreach ($products as $item) { ?>
+        <div class="ProItem">
+            <a href="/<?php echo $item['url_key']; ?>/">
+                <?php if ($item['pro_image'] != NULL) { ?>
+                    <img width="91" src="<?php echo AVATAR_RESIZE_PATH . "/90x140/" . $item['pro_image'] ?>">
+                <?php } else { ?>
+                    <img width="91" src="<?php echo SKIN_PATH ?>default/images/no-image.png">
+                <?php } ?>                    
+            </a>
+            <a href="/<?php echo $item['url_key']; ?>/">
+                <?php echo $item['pro_name']; ?>
+            </a>     
+        </div>
+    <?php } ?>
+
+</div>
