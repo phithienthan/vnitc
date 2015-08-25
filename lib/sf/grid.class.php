@@ -3,10 +3,10 @@
 /**
  * @author quyetnd
  */
-class Grid
+class Grid extends singleton
 {
 
-    public static $instance = NULL;
+    protected static $instance = NULL;
     private $html = '';
     private $_collection;
     private $_module;
@@ -37,14 +37,6 @@ class Grid
         if (!isset($_totalPage)) {
             $this->_totalPage = 0;
         }
-    }
-
-    public static function getInstance()
-    {
-        if (self::$instance === NULL) {
-            self::$instance = new self();
-        }
-        return self::$instance;
     }
 
     public function addColumn($attribute)

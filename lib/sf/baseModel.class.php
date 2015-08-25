@@ -1,15 +1,18 @@
 <?php
 
 /**
+ * Base model singleton class
  * @author quyetnd
  */
-class baseModel
+class baseModel extends singleton
 {
-
-    public static $instance;
     protected $_mysql;
 
-    function __construct()
+    /**
+     * Protected constructor to prevent creating a new instance of the
+     * *Singleton* via the `new` operator from outside of this class.
+     */    
+    protected function __construct()
     {
         $optionConnect = array(
             'host' => DB_HOST,
@@ -18,14 +21,6 @@ class baseModel
             'dbname' => DB_NAME,
         );
         $this->_mysql = Mysql::getInstance($optionConnect);
-    }
-
-    public static function getInstance()
-    {
-        if (!self::$instance) {
-            self::$instance = new baseModel();
-        }
-        return self::$instance;
     }
 
     public function get($name)
@@ -38,10 +33,5 @@ class baseModel
         }
         return NULL;
     }
-
-    function __destruct()
-    {
-        
-    }
-
+    
 }

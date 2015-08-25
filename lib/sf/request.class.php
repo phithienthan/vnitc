@@ -3,24 +3,11 @@
 /**
  * @author quyetnd
  */
-class Request
+class Request extends singleton
 {
 
-    public static $instance = NULL;
+    protected static $instance = NULL;
     public $request = NULL; //default router
-
-    /**
-     *
-     * @return Request 
-     */
-
-    public static function getInstance()
-    {
-        if (self::$instance === NULL) {
-            self::$instance = new self();
-        }
-        return self::$instance;
-    }
 
     public function __construct()
     {

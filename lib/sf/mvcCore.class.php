@@ -3,20 +3,19 @@
 /**
  * @author quyetnd
  */
-class mvcCore
+class mvcCore extends singleton
 {
     /*
-     * @the controller path
+     * @The controller path
      */
-
     public $module;
     public $controller;
     public $action;
-    private static $instance;
+    protected static $instance;
 
-    function __construct()
+    protected function __construct()
     {
-        /*         * * get the route from the url ** */
+        /* get the route from the url */
         $requestPath = (empty($_SERVER['REQUEST_URI'])) ? '' : $_SERVER['REQUEST_URI'];
         if (substr($requestPath, strlen($requestPath) - 1, strlen($requestPath) - 1) == "/") {
             $requestPath = substr($requestPath, 0, strlen($requestPath) - 1);
@@ -71,14 +70,4 @@ class mvcCore
         $file = APP_PATH . '/modules/' . $this->module . '/controllers/' . $this->controller . 'Controller.php';
     }
 
-    public static function getInstance()
-    {
-        if (!self::$instance) {
-            self::$instance = new mvcCore();
-        }
-        return self::$instance;
-    }
-
 }
-
-?>

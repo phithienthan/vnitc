@@ -3,30 +3,10 @@
 /**
  * @author quyetnd
  */
-class Helper
+class Helper extends baseModel
 {
 
     public static $instance = NULL;
-    protected $_mysql;
-
-    function __construct()
-    {
-        $optionConnect = array(
-            'host' => DB_HOST,
-            'username' => DB_USER,
-            'password' => DB_PASS,
-            'dbname' => DB_NAME,
-        );
-        $this->_mysql = Mysql::getInstance($optionConnect);
-    }
-
-    public static function getInstance()
-    {
-        if (self::$instance === NULL) {
-            self::$instance = new self();
-        }
-        return self::$instance;
-    }
 
     function removeTiengViet($content)
     {

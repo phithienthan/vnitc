@@ -15,15 +15,7 @@ Class baseView extends view
     public $description = "";
     public $title = "";
     public $keywords = "";
-    private static $instance;
-
-    public static function getInstance()
-    {
-        if (!self::$instance) {
-            self::$instance = new baseView();
-        }
-        return self::$instance;
-    }
+    protected static $instance;
 
     /**
      *
@@ -104,5 +96,3 @@ Class baseView extends view
 
     /* END SEO */
 }
-
-?>

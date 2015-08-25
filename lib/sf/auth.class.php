@@ -3,10 +3,10 @@
 /**
  * @author quyetnd
  */
-class Auth
+class Auth extends singleton
 {
 
-    public static $instance = NULL;
+    protected static $instance = NULL;
     public static $_mysql;
 
     function __construct()
@@ -18,14 +18,6 @@ class Auth
             'dbname' => DB_NAME,
         );
         $this->_mysql = Mysql::getInstance($optionConnect);
-    }
-
-    public static function getInstance()
-    {
-        if (self::$instance === NULL) {
-            self::$instance = new self();
-        }
-        return self::$instance;
     }
 
     public static function isLogin()

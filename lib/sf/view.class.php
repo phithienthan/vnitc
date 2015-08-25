@@ -3,7 +3,7 @@
 /**
  * @author quyetnd
  */
-Class view
+Class view extends singleton
 {
     /*
      * @Variables array
@@ -24,7 +24,7 @@ Class view
      * @return void
      *
      */
-    function __construct()
+    protected function __construct()
     {
         $mvcCore = mvcCore::getInstance();
         $this->module = $mvcCore->module;
@@ -46,5 +46,3 @@ Class view
         }
     }
 }
-
-?>
